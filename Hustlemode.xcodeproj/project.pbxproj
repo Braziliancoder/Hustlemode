@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		098CD4911EE053B0004CFB98 /* MoneyTrees.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 098CD4901EE053B0004CFB98 /* MoneyTrees.mp3 */; };
 		09B898511EDC6B84005C279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B898501EDC6B84005C279B /* AppDelegate.swift */; };
 		09B898531EDC6B84005C279B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B898521EDC6B84005C279B /* ViewController.swift */; };
 		09B898561EDC6B84005C279B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B898541EDC6B84005C279B /* Main.storyboard */; };
@@ -27,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		098CD4901EE053B0004CFB98 /* MoneyTrees.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MoneyTrees.mp3; sourceTree = "<group>"; };
 		09B8984D1EDC6B84005C279B /* Hustlemode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hustlemode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B898501EDC6B84005C279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09B898521EDC6B84005C279B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09B898521EDC6B84005C279B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		09B898551EDC6B84005C279B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09B898581EDC6B84005C279B /* Hustlemode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hustlemode.xcdatamodel; sourceTree = "<group>"; };
 		09B8985A1EDC6B84005C279B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		098CD48F1EE05372004CFB98 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				098CD4901EE053B0004CFB98 /* MoneyTrees.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		09B898441EDC6B84005C279B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				09B8985A1EDC6B84005C279B /* Assets.xcassets */,
 				09B8985C1EDC6B84005C279B /* LaunchScreen.storyboard */,
 				09B8985F1EDC6B84005C279B /* Info.plist */,
+				098CD48F1EE05372004CFB98 /* Music */,
 				09B898571EDC6B84005C279B /* Hustlemode.xcdatamodeld */,
 			);
 			path = Hustlemode;
@@ -151,6 +162,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 89NXCNWJ2X;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					09B898631EDC6B84005C279B = {
 						CreatedOnToolsVersion = 8.0;
@@ -187,6 +203,7 @@
 				09B8985E1EDC6B84005C279B /* LaunchScreen.storyboard in Resources */,
 				09B8985B1EDC6B84005C279B /* Assets.xcassets in Resources */,
 				09B898561EDC6B84005C279B /* Main.storyboard in Resources */,
+				098CD4911EE053B0004CFB98 /* MoneyTrees.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +429,7 @@
 				09B8986F1EDC6B84005C279B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09B898701EDC6B84005C279B /* Build configuration list for PBXNativeTarget "HustlemodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +438,7 @@
 				09B898721EDC6B84005C279B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

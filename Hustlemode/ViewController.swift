@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        init(contentsOf url: Sound MoneyTrees.mp3) throws
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "MoneyTrees", ofType: "mp3")!))
+        audioPlayer.prepareToPlay()
+            
+         var audioSession = AVAudioSession.sharedInstance()
+            
+            do{
+                try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            }
+            catch{
+                
+            }
+            
+        }
+     
+        catch{
+            print(error)
+        }
         
     }
 
@@ -22,6 +41,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func Play(_ sender: AnyObject) {
+        
+        audioPlayer.play()
+        
+    }
 
+    @IBAction func Pause(_ sender: AnyObject) {
+        if audioPlayer.isPlaying{
+            audioPlayer.pause()
+            
+        }
+        else{
+            
+        }
+    }
+    
+    @IBAction func Restart(_ sender: AnyObject) {
+        if audioPlayer.isPlaying{
+            
+            audioPlayer.currentTime = 0
+            audioPlayer.play()
+            
+        }
+        else{
+            
+            audioPlayer.play()
+            
+        }
+    }
+    
 }
 
